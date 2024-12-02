@@ -1,0 +1,12 @@
+.parentRoot{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    -ms-flex-align: center;
+}
+.webPath{
+    height: 150px;
+    width: 500px;
+    margin: 10px;
+    background-color: blanchedalmond; 
+}
