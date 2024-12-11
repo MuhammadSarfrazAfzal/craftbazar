@@ -7,8 +7,7 @@ const Welcomescreen = () => {
   return (
     <>
       <div className={classes.Welcomescreen}>
-        <div>
-        <div><Typography variant='h4' className={classes.heading}><b>Craft Bazaar Community is here</b></Typography></div>
+      <div><Typography variant='h4' className={classes.heading}><b>Craft Bazaar Community is here</b></Typography></div>
         <div className={classes.content}>
           <p className={classes.para}>This community is created for the help of craft artist to sell their
             artwork and for Buyer to get fully trusted product by this community.
@@ -30,7 +29,6 @@ const Welcomescreen = () => {
               <Link to='/SellerForm'><Button className={classes.button}>Go to Seller Section</Button></Link>
             </CardContent>
           </Card>
-        </div>
         </div>
       </div>
     </>

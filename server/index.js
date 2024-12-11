@@ -1,17 +1,10 @@
 const express = require("express")
-const mongoose = require('mongoose')
 const app = express()
 const port = 8080
-main()
-.then(()=>{
-    console.log('Connection succesfully established!')
-})
-.catch(err => console.log(err));
-
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/craftbazaar');
-
-}
+const path = require('path')
+const services = require('./Model/services.js')
+app.set('views',path.join(__dirname,'views'))
+app.set('view engine','ejs')
 app.listen(port,()=>{
     console.log('app is lisntening on 8080')
 })
