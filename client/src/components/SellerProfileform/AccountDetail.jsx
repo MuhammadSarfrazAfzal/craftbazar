@@ -6,17 +6,12 @@ const AccountDetail = () => {
     fullName: "",
     profession: "",
     skills: "",
-    experience: "Beginner",
-    profilePic: null,
+    experience: "Beginner"
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleFileChange = (e) => {
-    setFormData((prev) => ({ ...prev, profilePic: e.target.files[0] }));
   };
 
   const handleSubmit = async (e) => {
@@ -28,7 +23,7 @@ const AccountDetail = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/profile", {
+      const response = await fetch("http://localhost:5000/api/accountDetail", {
         method: "POST",
         body: form,
       });
@@ -40,17 +35,16 @@ const AccountDetail = () => {
           profession: "",
           skills: "",
           experience: "Beginner",
-          profilePic: null,
+          
         });
       } else {
         alert("Error saving profile.");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
       alert("Error connecting to the server.");
     }
   };
-
   return (
     <div className="profile-setup-container">
       <h1>Profile Setup</h1>
@@ -73,7 +67,7 @@ const AccountDetail = () => {
           name="profession"
           value={formData.profession}
           onChange={handleChange}
-          placeholder="Your profession (e.g., Graphic Designer)"
+          placeholder="Your profession (e.g., Craft Artist)"
           required
         />
 
@@ -99,15 +93,6 @@ const AccountDetail = () => {
           <option value="Intermediate">Intermediate</option>
           <option value="Expert">Expert</option>
         </select>
-
-        <label htmlFor="profilePic">Profile Picture</label>
-        <input
-          type="file"
-          id="profilePic"
-          name="profilePic"
-          onChange={handleFileChange}
-          accept="image/*"
-        />
 
         <button type="submit">Save Profile</button>
       </form>
