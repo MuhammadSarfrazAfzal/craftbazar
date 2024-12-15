@@ -3,12 +3,14 @@ import { useAuth } from '../../contexts/authContext'
 import { Card, Typography, CardActions, CardContent, CardMedia, Button} from '@mui/material';
 import useStyles from './style'
 import {Link} from 'react-router-dom'
+import Header from '../header';
 
 const Home = () => {
     const { currentUser } = useAuth()
     const classes = useStyles()
     return (
        <>
+       <Header></Header>
        <div className={classes.Welcomescreen}>
       <div><Typography variant='h4' className={classes.heading}><b>Craft Bazaar Community is here</b></Typography></div>
         <div className={classes.content}>
@@ -22,7 +24,7 @@ const Home = () => {
             <CardMedia></CardMedia>
             <CardContent>
               <Typography>Continue as Buyer by clicking below:</Typography>
-              <Button className={classes.button}>Go to Buyer Section</Button>
+              <Link to='/home/buyer'><Button className={classes.button}>Go to Buyer Section</Button></Link>
             </CardContent>
           </Card>
 

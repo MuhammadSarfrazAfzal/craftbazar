@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
-        top:'60px'
+        top:'40px'
     },
     img:{
         width:'300px',
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
     userForm:{
         position:'relative',
-        top:'80px'
+        top:'40px'
     },
     userInput:{
         borderColor:'blue',

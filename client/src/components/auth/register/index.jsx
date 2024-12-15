@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Navigate, Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../contexts/authContext'
 import { doCreateUserWithEmailAndPassword } from '../../../firebase/auth'
-
+import Header from '../../header'
 const Register = () => {
 
     const navigate = useNavigate()
@@ -24,7 +24,8 @@ const Register = () => {
     }
 
     return (
-        <>
+        <>  
+            <Header></Header>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
             <main className="w-full h-screen flex self-center place-content-center place-items-center">

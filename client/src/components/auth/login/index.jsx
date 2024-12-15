@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth'
 import { useAuth } from '../../../contexts/authContext'
+import Header from '../../header'
 
 const Login = () => {
     const { userLoggedIn } = useAuth()
@@ -31,6 +32,8 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Header></Header>
         <div>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
@@ -110,6 +113,7 @@ const Login = () => {
                 </div>
             </main>
         </div>
+        </>
     )
 }
 

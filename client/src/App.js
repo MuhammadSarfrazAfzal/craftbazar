@@ -1,14 +1,16 @@
 import Login from "./components/auth/login";
 import Register from "./components/auth/register";
-
-import Header from "./components/header";
 import Home from "./components/home";
 
 import SellerProfileForm from "./components/SellerProfileform/SellerProfileForm";
 import AccountDetail from "./components/SellerProfileform/AccountDetail";
 
+
+
 import { AuthProvider } from "./contexts/authContext";
 import { useRoutes } from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Buyer from "./components/BuyerSection/Buyer";
 
 function App() {
   const routesArray = [
@@ -17,7 +19,7 @@ function App() {
       element: <Login />,
     },
     {
-      path: "login",
+      path: "/login",
       element: <Login />,
     },
     {
@@ -29,6 +31,10 @@ function App() {
       element: <Home />,
     },
     {
+      path: "/home/buyer",
+      element: <Buyer />,
+    },
+    {
       path: "/SellerForm",
       element: <SellerProfileForm />,
     },
@@ -36,11 +42,14 @@ function App() {
       path: "/SellerForm/Accountdetail",
       element: <AccountDetail />,
     },
+    {
+      path: "/SellerForm/Accountdetail/dashboard",
+      element: <Dashboard />,
+    },
   ];
   let routesElement = useRoutes(routesArray);
   return (
     <AuthProvider>
-      <Header />
       <div className="w-full h-screen flex flex-col">{routesElement}</div>
     </AuthProvider>
   );

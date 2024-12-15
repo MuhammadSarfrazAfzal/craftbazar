@@ -1,0 +1,90 @@
+/* Page Layout */
+.explore-gigs-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .explore-gigs-page h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .explore-gigs-page p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Gigs Grid */
+  .gigs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Gig Card */
+  .gig-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid #ddd;
+  }
+  
+  .gig-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .gig-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .gig-details {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .gig-details h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .gig-details p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .gig-details strong {
+    color: #1dbf73;
+  }
+  
+  .view-details-btn {
+    display: inline-block;
+    background-color: #1dbf73;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #17a564;
+  }
+  

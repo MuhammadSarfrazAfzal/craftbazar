@@ -47,8 +47,8 @@ const AccountDetail = () => {
     }
   };
   return (
-    <div className="profile-setup-container">
-      <h1>Profile Setup</h1>
+    <div className="profile-setup-container" style={{width:'1000px'}}>
+      <h1><b>Profile Setup</b></h1>
       <form onSubmit={handleSubmit} className="profile-form">
         <label htmlFor="fullName">Full Name</label>
         <input

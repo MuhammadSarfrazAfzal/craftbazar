@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Navbar.css";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -25,7 +26,7 @@ const Navbar = () => {
         <div className="navbar-links">
           <a href="#dashboard">Dashboard</a>
           <a href="#orders">Orders</a>
-          <a href="#gigs">Gigs</a>
+          <a href="#gigs">Services</a>
           <a href="#analytics">Analytics</a>
         </div>
 
@@ -56,7 +57,7 @@ const Navbar = () => {
               <div className="dropdown-menu">
                 <a href="#profile">Profile</a>
                 <a href="#settings">Settings</a>
-                <a href="#logout">Log Out</a>
+                <Link to='/login'><a href="#logout">Switch to Buying</a></Link>
               </div>
             )}
           </div>
