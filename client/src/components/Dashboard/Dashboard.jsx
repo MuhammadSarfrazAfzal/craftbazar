@@ -1,10 +1,13 @@
 import React from 'react'
-
+import Navbar from './Navbar'
+import SideBar from './SideBar'
+import Main from './Main'
 const Dashboard = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Navbar></Navbar>
+    
+    </> 
   )
 }
 

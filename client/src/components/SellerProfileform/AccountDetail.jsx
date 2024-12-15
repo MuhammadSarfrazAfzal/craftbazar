@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import './accountdetail.css'
+import { Link } from 'react-router-dom';
 const AccountDetail = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -94,7 +95,7 @@ const AccountDetail = () => {
           <option value="Expert">Expert</option>
         </select>
 
-        <button type="submit">Save Profile</button>
+        <Link to='/SellerForm/Accountdetail/Dashboard'><button type="submit">Save Profile</button></Link>
       </form>
     </div>
   )

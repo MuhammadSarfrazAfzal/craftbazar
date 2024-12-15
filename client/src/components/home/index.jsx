@@ -1,12 +1,15 @@
 import React from 'react'
+import { useAuth } from '../../contexts/authContext'
 import { Card, Typography, CardActions, CardContent, CardMedia, Button} from '@mui/material';
 import useStyles from './style'
 import {Link} from 'react-router-dom'
-const Welcomescreen = () => {
-  const classes = useStyles()
-  return (
-    <>
-      <div className={classes.Welcomescreen}>
+
+const Home = () => {
+    const { currentUser } = useAuth()
+    const classes = useStyles()
+    return (
+       <>
+       <div className={classes.Welcomescreen}>
       <div><Typography variant='h4' className={classes.heading}><b>Craft Bazaar Community is here</b></Typography></div>
         <div className={classes.content}>
           <p className={classes.para}>This community is created for the help of craft artist to sell their
@@ -31,8 +34,8 @@ const Welcomescreen = () => {
           </Card>
         </div>
       </div>
-    </>
-  )
+       </>
+    )
 }
 
-export default Welcomescreen
+export default Home
