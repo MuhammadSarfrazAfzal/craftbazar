@@ -1,0 +1,65 @@
+.service-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-form-container h2 {
+    text-align: center;
+    color: #1dbf73;
+    margin-bottom: 20px;
+  }
+  
+  .service-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-form label {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .service-form input,
+  .service-form textarea,
+  .service-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .service-form textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .service-form input:focus,
+  .service-form textarea:focus,
+  .service-form select:focus {
+    outline: none;
+    border-color: #1dbf73;
+  }
+  
+  .submit-btn {
+    background-color: #1dbf73;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #17a564;
+  }
+  

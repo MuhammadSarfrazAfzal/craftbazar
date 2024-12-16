@@ -11,6 +11,9 @@ import { AuthProvider } from "./contexts/authContext";
 import { useRoutes } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Buyer from "./components/BuyerSection/Buyer";
+import Service from "./components/Dashboard/Routes/Service";
+import Order from "./components/Dashboard/Routes/Order";
+import ServiceForm from  './components/Dashboard/Routes/ServiceForm'
 
 function App() {
   const routesArray = [
@@ -45,6 +48,18 @@ function App() {
     {
       path: "/SellerForm/Accountdetail/dashboard",
       element: <Dashboard />,
+    },
+    {
+      path: "/SellerForm/Accountdetail/dashboard/service",
+      element: <Service />,
+    },
+    {
+      path: "/SellerForm/Accountdetail/dashboard/order",
+      element: <Order />,
+    },
+    {
+      path: "/SellerForm/Accountdetail/dashboard/serviceform",
+      element: <ServiceForm />,
     },
   ];
   let routesElement = useRoutes(routesArray);

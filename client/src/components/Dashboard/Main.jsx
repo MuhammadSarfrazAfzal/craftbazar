@@ -1,5 +1,6 @@
 import React from 'react'
 import "./main.css"
+import {Link} from 'react-router-dom'
 const Main = () => {
   return (
     <>
@@ -34,26 +35,26 @@ const Main = () => {
       <section className="gigs-section">
         <div className="gigs-header">
           <h2>Your Services</h2>
-          <button className="btn btn-primary">Create a New Service</button>
+          <Link to='/SellerForm/Accountdetail/dashboard/serviceform'><button className="btn btn-primary">Create a New Service</button></Link>
         </div>
 
         {/* Gig Cards */}
         <div className="gig-cards">
           <div className="gig-card">
             <img
-              src="https://via.placeholder.com/150"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7EEnYclnniUgs5_sw1aNa7fyjCoqGLQOu6g&s"
               alt="Service Thumbnail"
             />
-            <h3>I will design a stunning logo for your business</h3>
+            <h3>Build a hand made minitaure art.</h3>
             <p>Price: $50</p>
             <p>Status: Active</p>
           </div>
           <div className="gig-card">
             <img
-              src="https://via.placeholder.com/150"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn_rwVtwohefvvSLRKMDRLnY0PdKmdqYtPqw&s"
               alt="Service Thumbnail"
             />
-            <h3>I will create a professional website</h3>
+            <h3>Hand made painted art</h3>
             <p>Price: $200</p>
             <p>Status: Paused</p>
           </div>

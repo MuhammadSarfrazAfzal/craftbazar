@@ -24,9 +24,9 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="navbar-links">
-          <a href="#dashboard">Dashboard</a>
-          <a href="#orders">Orders</a>
-          <a href="#gigs">Services</a>
+          <Link to='/SellerForm/Accountdetail/dashboard'><a href="#dashboard">Dashboard</a></Link>
+          <Link to='/SellerForm/Accountdetail/dashboard/order'><a href="#orders">Orders</a></Link>
+          <Link to='/SellerForm/Accountdetail/dashboard/service'><a href="#gigs">Services</a></Link>
           <a href="#analytics">Analytics</a>
         </div>
 
